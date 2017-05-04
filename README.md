@@ -9,6 +9,8 @@ npm install
 ## Запуск сервера с hot reload на localhost:8080
 npm run dev
 
+```
+
 # Техническое задание
 
 ## Верстка
