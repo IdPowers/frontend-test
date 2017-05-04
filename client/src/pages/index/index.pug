@@ -1,0 +1,26 @@
+extends /pages/main
+
+include /blocks/page/page
+include /blocks/header/header
+include /blocks/product-preview/product-preview
+include /blocks/product-promo/product-promo
+include /blocks/product-story/product-story
+include /blocks/product-social/product-social
+include /blocks/footer/footer
+
+block title
+  | Главная страница
+
+block content
+  +Page
+    +Header({
+      class: '__header'
+    })
+    +ProductPreview({})
+    +ProductPromo
+    +ProductStory
+    +ProductSocial
+    +Footer({
+      class: '__footer'
+    })
+

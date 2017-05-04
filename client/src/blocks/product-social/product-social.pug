@@ -1,0 +1,16 @@
+mixin ProductSocial(obj)
+  if !obj
+    - obj = {}
+  +b.product-social
+    +e.centerer
+      +e.subtitle Social
+      +e.title #NIKEAIRMAX
+      +e.posts
+        +e.post
+          +e.post-image(src=require('assets/photo-1.jpg'))
+        +e.post
+          +e.post-image(src=require('assets/photo-2.jpg'))
+        +e.post
+          +e.post-image(src=require('assets/photo-3.jpg'))
+        +e.post
+          +e.post-image(src=require('assets/photo-4.jpg'))

@@ -1,0 +1,140 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'footer'
+
+.{$bl}
+  padding-top 40px
+  padding-bottom 30px
+  background-color #0c0d0d
+
+  &__centerer
+    centerer()
+    padding-right 50px
+    padding-left 50px
+
+  &__row
+    font-size 0
+
+    &:last-child
+      padding-top 55px
+
+  &__logo
+    display inline-block
+    vertical-align top
+    width 100px
+    padding-left 10px
+
+  &__sitemap
+    display inline-block
+    vertical-align top
+    width 790px
+    font-size 0
+
+  &__sitemap-cell
+    display inline-block
+    vertical-align top
+    width 200px
+
+  &__sitemap-item
+    display block
+
+    &:not(:last-child)
+      margin-bottom 11px
+
+  &__sitemap-link
+    font-size 14px
+    line-height 1
+    font-family $font-din-pro-cond
+    color #666
+    font-weight 500
+    text-transform uppercase
+    text-decoration none
+    letter-spacing .5px
+
+    &:hover
+    &:active
+    &:visited
+    &:focus
+      color #666
+      text-decoration none
+
+    &:hover
+      color #0089cf
+
+  &__share
+    display inline-block
+    vertical-align top
+    width 290px
+
+  &__share-items
+    margin-right -5px
+    margin-left -5px
+
+  &__share-item
+    position relative
+    display inline-block
+    vertical-align top
+    width 50px
+    height 50px
+    margin-right 5px
+    margin-left 5px
+    border 1px solid rgba(#fff, .1)
+    cursor pointer
+
+    &:hover
+      border-color rgba(#0089cf, .5)
+
+      .{$bl}__share-icon
+        fill rgba(#0089cf, .8)
+
+  &__share-icon
+    position absolute
+    top 50%
+    right 0
+    left 0
+    display block
+    margin-top -10px
+    margin-right auto
+    margin-left auto
+    fill rgba(#fff, .3)
+
+    &_fb
+      width 9px
+      height 20px
+
+    &_tw
+      width 17px
+      height 13px
+      margin-top -6px
+
+    &_gp
+      width 20px
+      height 20px
+
+    &_ok
+      width 20px
+      height 20px
+
+    &_vk
+      width 20px
+      height 20px
+
+  &__share-title
+    padding-bottom 10px
+    padding-left 10px
+    margin-top 25px
+    border-bottom 1px solid
+    font-size 14px
+    line-height 2
+    font-weight 300
+    font-family $font-roboto
+    color #666
+
+  &__copyright
+    font-size 12px
+    line-height 2
+    font-family $font-roboto
+    font-weight 300
+    color #666
+    text-align center
+    letter-spacing .3px

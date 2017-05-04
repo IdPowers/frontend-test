@@ -1,0 +1,81 @@
+include /blocks/logo/logo
+include /blocks/icon/icon
+
+mixin Footer(obj)
+  if !obj
+    - obj = {}
+  +b.FOOTER.footer(class=obj.class || {})
+    +e.centerer
+      +e.row
+        +e.logo
+          +Logo
+        +e.sitemap
+          +e.sitemap-cell
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Footwear
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Clothing
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Accessories
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Brands
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Clearance
+          +e.sitemap-cell
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') About
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Contact us
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Support
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Store locator
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Press room
+          +e.sitemap-cell
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Website terms
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Select country
+            +e.sitemap-item
+              +e.A.sitemap-link(href='#') Source code
+        +e.share
+          +e.share-items
+            +e.share-item
+              +Icon({
+                icon: '#icon-vk',
+                class: '__share-icon_vk',
+                width: 20,
+                height: 20
+              })
+            +e.share-item
+              +Icon({
+                icon: '#icon-ok',
+                class: '__share-icon_ok',
+                width: 20,
+                height: 20
+              })
+            +e.share-item
+              +Icon({
+                icon: '#icon-facebook',
+                class: '__share-icon_fb',
+                width: 9,
+                height: 20
+              })
+            +e.share-item
+              +Icon({
+                icon: '#icon-twitter',
+                class: '__share-icon_tw',
+                width: 17,
+                height: 13
+              })
+            +e.share-item
+              +Icon({
+                icon: '#icon-google-plus',
+                class: '__share-icon_gp',
+                width: 20,
+                height: 20
+              })
+          +e.share-title Share this page
+      +e.row
+        +e.copyright Copyright © 2015 Bree Orthonormai. All rights reserved.

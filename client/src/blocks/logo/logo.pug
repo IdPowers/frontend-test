@@ -1,0 +1,5 @@
+mixin Logo(obj)
+  if !obj
+    - obj = {}
+  +b.logo
+    +e.IMG.img(src=require('assets/logo.png'), alt='')

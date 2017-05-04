@@ -1,0 +1,50 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'product-social'
+
+.{$bl}
+  min-height 660px
+  padding-top 100px
+  padding-bottom 50px
+  background-color #fff
+
+  &__centerer
+    centerer()
+    padding-right 50px
+    padding-left 50px
+
+  &__title
+    font-size 25px
+    line-height 1
+    font-family $font-din-pro-cond
+    font-weight 500
+    text-transform uppercase
+    letter-spacing .5px
+
+  &__subtitle
+    font-size 14px
+    line-height 1.8
+    font-family $font-din-pro-cond
+    font-weight 500
+    text-transform uppercase
+    letter-spacing .5px
+
+  &__posts
+    padding-top 30px
+    margin-right -10px
+    margin-left -10px
+    font-size 0
+
+  &__post
+    display inline-block
+    vertical-align top
+    margin-top 10px
+    margin-left 10px
+    margin-right 10px
+    margin-bottom 10px
+    width calc(25% - 20px)
+    opacity .1
+    transition opacity .15s ease
+
+    &:hover
+      opacity 1

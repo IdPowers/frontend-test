@@ -1,0 +1,36 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'product-promo'
+
+.{$bl}
+  min-height 660px
+  padding-top 255px
+  background-color #9c9396
+  background-image url(../../assets/product-cover.jpg)
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  color #fff
+
+  &__centerer
+    centerer()
+    padding-right 50px
+    padding-left 50px
+
+  &__text
+    max-width 390px
+
+  &__title
+    font-size 24px
+    font-family $font-din-pro-cond
+    text-transform uppercase
+    font-weight 500
+    letter-spacing .7px
+
+  &__description
+    margin-top 18px
+    font-size 14px
+    line-height 1.79
+    font-family $font-roboto
+    font-weight 300
+    letter-spacing .25px

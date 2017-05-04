@@ -1,0 +1,16 @@
+include ../../helpers/bemto/bemto
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title: block title
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900", rel="stylesheet")
+    each value, key in htmlWebpackPlugin.files.css
+      link(href=htmlWebpackPlugin.files.css[key], rel="stylesheet")
+  body
+    block content
+
+    each value, key in htmlWebpackPlugin.files.chunks
+      if [htmlWebpackPlugin.options.filename.replace('.html', ''), 'vendor', 'manifest'].indexOf(key) !== -1
+        script(src=htmlWebpackPlugin.files.chunks[key].entry)

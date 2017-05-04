@@ -1,0 +1,5 @@
+mixin Icon(obj)
+  if !obj
+    - obj = {}
+  +b.SVG.icon(width=obj.width || false, height=obj.height || false, class=obj.class || '')
+    use(xlink:href=obj.icon || false)

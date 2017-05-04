@@ -1,0 +1,44 @@
+include /blocks/logo/logo
+include /blocks/icon/icon
+
+mixin Header(obj)
+  if !obj
+    - obj = {}
+  +b.HEADER.header(class=obj.class || '')
+    +e.centerer
+      +e.left
+        +e.logo
+          +Logo
+        +e.menu
+          +e.A.menu-item_active(href='#') Footwear
+          +e.A.menu-item(href='#') Clothing
+          +e.A.menu-item(href='#') Accessories
+          +e.A.menu-item(href='#') Brands
+          +e.A.menu-item(href='#') Exclusive
+      +e.right
+        +e.search
+          +Icon({
+            icon: '#icon-search',
+            width: 16,
+            height: 16,
+            class: '__icon_search'
+          })
+          | Search
+        +e.cart
+          +Icon({
+            icon: '#icon-cart',
+            width: 17,
+            height: 14,
+            class: '__icon_cart'
+          })
+          | Cart
+          +e.SPAN.cart-count (2)
+        +e.auth
+          +e.auth-sign-in
+            +Icon({
+              icon: '#icon-user',
+              width: 16,
+              height: 16,
+              class: '__icon_auth'
+            })
+            | Sign in
