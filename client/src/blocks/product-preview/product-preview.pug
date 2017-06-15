@@ -1,5 +1,37 @@
+include /blocks/framed-select/framed-select
+include /blocks/button/button
+
 mixin ProductPreview(obj)
   if !obj
     - obj = {}
   +b.product-preview
-    //- todo верстка превью товара
+    +e.centerer
+      +e.main-image(src=require('assets/sneakers.png'))
+      +e.panel
+        +e.wish-button(src=require('assets/wish.png'))
+        +e.item-info
+          +e.brand NIKE
+          +e.name AIR MAX TAVAS SD
+          +e.price $ 160.00
+        +e.item-color-selection
+          +e.colors-plain-list COLORS  &#8212;
+            +e.LABEL
+              +e.INPUT(type="radio" name="colors" value="0" checked)
+              +e BLACK/PINK
+            +e.LABEL
+              +e.INPUT(type="radio" name="colors" value="1")
+              +e POW/TOUR
+            +e.LABEL
+              +e.INPUT(type="radio" name="colors" value="2")
+              +e YELLOW/WHITE
+          +e.colors-pics-list
+            +e.LABEL
+              +e.IMG.selected-pic(src=require('assets/black-pink.png'))
+            +e.LABEL
+              +e.IMG(src=require('assets/black-white.png'))
+            +e.LABEL
+              +e.IMG(src=require('assets/black-pink.png'))
+        +e.item-size-selection
+          +e.LABEL Size charts
+          +FramedSelect({ id: 'preview-size-list', width: '120px',options: [1, 2, 3, 4] })
+          +Button({ id: 'preview-add-cart', text: 'Add to cart'})

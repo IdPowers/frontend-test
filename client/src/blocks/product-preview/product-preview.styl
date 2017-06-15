@@ -6,3 +6,69 @@ $bl = 'product-preview'
   background #fff
   min-height 610px
   outline 1px dotted #0089cf
+  padding-top 70px
+  padding-bottom 130px
+  font-family 'DIN Pro Condensed', Arial, sans-serif;
+  font-weight 500;
+
+  &__centerer
+    centerer()
+    padding-right 50px
+    padding-left 50px
+
+  &__main-image
+    padding-left 70px
+
+  &__panel
+    float right
+    padding-right 100px
+
+  &__wish-button
+    margin-bottom 40px
+    cursor pointer
+
+  &__brand
+    font-size 23px
+
+  &__name
+    font-size 33px
+    
+  &__price
+    font-size 16px
+    color #666
+
+  &__colors-plain-list
+    font-size 16px
+    color #666
+    padding 15px 0
+
+    & label
+      color #039be5
+      cursor pointer
+
+    input[name="colors"]
+      visibility hidden
+      margin-left -6px
+
+  &__colors-pics-list
+    padding-bottom 10px
+
+    & label
+      display inline-block
+      cursor pointer
+
+    & label + label
+      margin-left 10px
+
+  &__selected-pic
+    outline 2px solid #039be5
+
+  &__item-size-selection label
+    display block
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    padding-bottom 10px
+
+.select2-container + .regular-button
+  margin-left 15px
