@@ -6,3 +6,108 @@ $bl = 'product-story'
   min-height 660px
   outline 1px dotted #0089cf
   background-color #f5f5f5
+
+  &__centerer
+    centerer()
+    padding-right 50px
+    padding-left 50px
+
+  &__content
+    padding-top 40px
+    display flex
+    flex-flow row
+
+  &__text
+    max-width 320px
+
+  &__title
+    font-size 18px
+    font-family $font-din-pro-cond
+    color #666
+    padding-top 30px
+
+  &__big-title
+    font-size 24px
+    font-weight 500
+    font-family $font-din-pro-cond
+    padding-bottom 20px
+
+  &__description
+    font-size 14px
+    line-height 1.79
+    font-family $font-roboto
+    font-weight 300
+    letter-spacing .25px
+
+  &__benefit
+    font-size 18px
+    font-weight 500
+    font-family $font-din-pro-cond
+    text-transform uppercase
+    padding-top 15px
+
+  &__details
+    font-size 14px
+    font-weight 300
+    font-family $font-roboto
+
+  &__panel
+    flex 1
+    display flex
+    flex-flow column
+    justify-content center
+
+  &__box
+    padding 20px
+    background-color #fff
+    border 3px solid #ddd
+    display inline-block
+    float right
+    align-self center
+
+  &__brand
+    font-size 24px
+    font-weight 500
+    font-family $font-din-pro-cond
+    text-transform uppercase
+
+  &__name
+    font-size 20px
+    padding 10px 0
+    color #666
+    font-weight 300
+    font-family $font-roboto
+
+  &__colors-plain-list
+    font-family $font-din-pro-cond
+    font-size 16px
+    color #666
+    padding-bottom 40px
+
+    & label
+      color #039be5
+      cursor pointer
+      font-weight 500
+
+    & label + label
+      margin-left 10px
+
+    input[name="colors"]
+      visibility hidden
+      margin-left -15px
+
+  &__price-line
+    font-family $font-din-pro-cond
+    width 100%
+    font-weight 500
+    margin-top 40px
+
+    & span:first-child
+      float left
+
+    & span:last-child
+      float right
+
+  &__size-selection
+    margin-top 15px
+    display inline-block

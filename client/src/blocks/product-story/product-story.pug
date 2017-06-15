@@ -1,4 +1,47 @@
+include /blocks/framed-select/framed-select
+include /blocks/button/button
+
 mixin ProductStory(obj)
   if !obj
     - obj = {}
   +b.product-story
+    +e.centerer
+      +e.content
+        +e.text
+          +e.title STORY
+          +e.big-title NIKE AIR MAX ORIGINS
+          +e.description.
+            Nike's revolutionary Air-Sole unit made its way into Nike footwear in the late '70s.
+            In 1987, the Nike Air Max 1 debuted with visible air in its heel,
+            allowing fans more than just the feel of Air-Sole comfort
+          +e.title BENEFITS
+          +e.benefit Layered textile/synthetic upper
+          +e.details for lightweight durability and comfort
+          +e.benefit Injected Phylon midsole doubles
+          +e.details Outsole to reduce the overall weight of the shoe
+          +e.benefit Max Air heel unit
+          +e.details delivers maximum lightweight cushioning
+          +e.benefit Rubber Waffle outsole
+          +e.details Durable, multi-surface traction
+        +e.product-image(src=require('assets/sneakers-pair.png'))
+        +e.panel
+          +e.box
+            +e.brand NIKE
+            +e.name Air Max Tavas SD
+            +e.colors-plain-list
+              +e.LABEL
+                +e.INPUT(type="radio" name="colors" value="0" checked)
+                +e BLACK/PINK
+              +e.LABEL
+                +e.INPUT(type="radio" name="colors" value="1")
+                +e POW/TOUR
+              +e.LABEL
+                +e.INPUT(type="radio" name="colors" value="2")
+                +e YELLOW/WHITE
+            +e.preview-product-image(src=require('assets/sneaker-min.png'))
+            +e.price-line
+              +e.SPAN EN STOCK
+              +e.SPAN $ 160.00
+            +e.size-selection
+              +FramedSelect({id: 'story-size-list', width: '120px', options: [1, 2, 3, 4]})
+              +Button({id: 'story-add-cart', text: 'Add to cart'})
