@@ -6,7 +6,8 @@ mixin ProductPreview(obj)
     - obj = {}
   +b.product-preview
     +e.centerer
-      +e.main-image(src=require('assets/sneakers.png'))
+      +e.main-image
+        +e.IMG(src=require('assets/sneakers.png'))
       +e.panel
         +e.wish-button(src=require('assets/wish.png'))
         +e.item-info

@@ -19,6 +19,7 @@ $bl = 'product-story'
 
   &__text
     max-width 320px
+    padding-top 40px
 
   &__title
     font-size 18px
@@ -111,3 +112,12 @@ $bl = 'product-story'
   &__size-selection
     margin-top 15px
     display inline-block
+
+@media (max-width: 1280px)
+  .{$bl}
+    &__product-image
+      line-height 550px
+      & img
+        height auto
+        vertical-align middle
+        width 350px
