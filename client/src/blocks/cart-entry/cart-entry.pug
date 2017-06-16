@@ -1,0 +1,17 @@
+mixin CartEntry(obj)
+  if !obj
+    - obj = {}
+  +b.cart-entry
+    +e.counter
+      +e.increase-btn(src=require('assets/plus.png'))
+      +e.amount 1
+      +e.decrease-btn(src=require('assets/less.png'))
+    +e.product-image
+      +e.IMG(src=obj.image)
+    +e.description
+      +e.brand= obj.brand
+      +e.name= obj.name
+    +e.product-size-title SIZE
+    +e.product-size
+      +e.SPAN.size-val= obj.size
+    +e.price= obj.price

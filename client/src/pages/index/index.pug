@@ -2,6 +2,7 @@ extends /pages/main
 
 include /blocks/page/page
 include /blocks/header/header
+include /blocks/cart-sidebar/cart-sidebar
 include /blocks/product-preview/product-preview
 include /blocks/product-promo/product-promo
 include /blocks/product-story/product-story
@@ -13,14 +14,16 @@ block title
 
 block content
   +Page
-    +Header({
-      class: '__header'
-    })
-    +ProductPreview({})
-    +ProductPromo
-    +ProductStory
-    +ProductSocial
-    +Footer({
-      class: '__footer'
-    })
+    +CartSidebar({})
+    +b.pusher
+      +Header({
+        class: '__header'
+      })
+      +ProductPreview({})
+      +ProductPromo
+      +ProductStory
+      +ProductSocial
+      +Footer({
+        class: '__footer'
+      })
 

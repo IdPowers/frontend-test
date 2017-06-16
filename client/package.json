@@ -80,6 +80,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "normalize": "^0.3.1",
-    "select2": "^4.0.3"
+    "select2": "^4.0.3",
+    "semantic-ui-sidebar": "^2.2.10"
   }
 }

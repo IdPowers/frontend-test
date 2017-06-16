@@ -1,0 +1,60 @@
+@import "../../../helpers/mixins.styl"
+
+$bl = 'cart-entry'
+
+cell-content()
+  display table-cell
+  vertical-align middle
+  text-align center
+
+.{$bl}
+  display table-row
+  width 100%
+  font-family $font-din-pro-cond
+  line-height 100px
+
+  &__counter
+    display table-cell
+    line-height: 32px;
+    text-align: center;
+
+  &__increase-btn
+  &__decrease-btn
+    cursor pointer
+
+  &__amount
+    vertical-align middle
+    text-align center
+    font-weight 500
+
+  &__product-image
+    cell-content()
+    line-height 15px
+
+  &__description
+    cell-content()
+    line-height 20px
+    text-align left
+
+  &__brand
+    font-size 20px
+    font-weight 500
+
+  &__name
+    font-size 18px
+    font-weight 300
+
+  &__product-size-title
+  &__product-size
+    cell-content()
+    font-weight 500
+
+  &__size-val
+    padding 15px
+    background-color #d9e0e3
+    font-weight 500
+
+  &__price
+    cell-content()
+    font-weight 500
+    text-align right

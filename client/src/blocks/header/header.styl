@@ -1,4 +1,5 @@
 @import "../../../helpers/mixins.styl"
+@import "../cart-sidebar/cart-sidebar.styl"
 
 $bl = 'header'
 
@@ -108,6 +109,10 @@ $bl = 'header'
     font-weight 500
     color #333
     letter-spacing .5px
+    cursor pointer
+
+    &:hover
+      color #0089cf
 
   &__cart
     @extend .{$bl}__search
