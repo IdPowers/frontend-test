@@ -1,0 +1,6 @@
+mixin Checkbox(obj)
+  if !obj
+    - obj = {}
+  +b.LABEL.control--checkbox.control= obj.text || ''
+    input(type="checkbox", required=obj.required || false)
+    div.control__indicator

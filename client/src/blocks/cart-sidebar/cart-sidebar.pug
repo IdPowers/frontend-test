@@ -2,6 +2,7 @@ include /blocks/light-input/light-input
 include /blocks/light-select/light-select
 include /blocks/cart-entry/cart-entry
 include /blocks/delete-dialog/delete-dialog
+include /blocks/checkbox/checkbox
 
 mixin CartSidebar(obj)
   if !obj
@@ -119,8 +120,10 @@ mixin CartSidebar(obj)
           +e.clause SUBTOTAL
           +e.cost= '$' + total
       +e.agreement
-        +e.INPUT(type="checkbox")
-        +e.SPAN I agree terms of use and privacy
+        +Checkbox({
+          text: 'I agree terms of use and privacy',
+          required: true
+        })
       +e.confirmation
         +Button({ id: 'cart-confirm', text: 'Confirm'})
   +DeleteDialog()

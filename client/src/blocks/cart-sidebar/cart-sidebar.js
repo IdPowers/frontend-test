@@ -44,13 +44,21 @@ $('#close-delete').on('click', (e) => {
   $('#delete-dialog').modal('hide');
 });
 
-// Confirm cart
+// Confirm cart validation
 $('#cart-confirm').on('click', () => {
   $('input.light-input').filter('[required]').each((idx, elem) => {
     if (!$(elem).val()) {
       $(elem).addClass('light-input_invalid');
     }
   });
+
+  if ($('.control--checkbox input').is(':checkbox')) {
+    $('.control--checkbox .control__indicator').addClass('control__indicator_invalid');
+  }
+});
+
+$('.control--checkbox input').on('change', () => {
+  $('.control--checkbox .control__indicator').removeClass('control__indicator_invalid');
 });
 
 $('.cart-sidebar__informations').on('change', 'input.light-input', (e) => {
