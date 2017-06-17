@@ -40,42 +40,9 @@ mixin Footer(obj)
             +e.sitemap-item
               +e.A.sitemap-link(href='#') Source code
         +e.share
-          +e.share-items
-            +e.share-item
-              +Icon({
-                icon: '#icon-vk',
-                class: '__share-icon_vk',
-                width: 20,
-                height: 20
-              })
-            +e.share-item
-              +Icon({
-                icon: '#icon-ok',
-                class: '__share-icon_ok',
-                width: 20,
-                height: 20
-              })
-            +e.share-item
-              +Icon({
-                icon: '#icon-facebook',
-                class: '__share-icon_fb',
-                width: 9,
-                height: 20
-              })
-            +e.share-item
-              +Icon({
-                icon: '#icon-twitter',
-                class: '__share-icon_tw',
-                width: 17,
-                height: 13
-              })
-            +e.share-item
-              +Icon({
-                icon: '#icon-google-plus',
-                class: '__share-icon_gp',
-                width: 20,
-                height: 20
-              })
+          +e.share-items.ya-share2(data-services="vkontakte,facebook,odnoklassniki,gplus,twitter")
           +e.share-title Share this page
       +e.row
         +e.copyright Copyright © 2015 Bree Orthonormai. All rights reserved.
+    script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+    script(src="//yastatic.net/share2/share.js")

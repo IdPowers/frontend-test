@@ -1,10 +1,10 @@
 mixin CartEntry(obj)
   if !obj
     - obj = {}
-  +b.cart-entry
+  +b.cart-entry(id= obj.id)
     +e.counter
       +e.increase-btn(src=require('assets/plus.png'))
-      +e.amount 1
+      +e.amount= obj.amount
       +e.decrease-btn(src=require('assets/less.png'))
     +e.product-image
       +e.IMG(src=obj.image)
@@ -14,4 +14,4 @@ mixin CartEntry(obj)
     +e.product-size-title SIZE
     +e.product-size
       +e.SPAN.size-val= obj.size
-    +e.price= obj.price
+    +e.price= '$ ' + obj.price

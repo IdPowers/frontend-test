@@ -32,7 +32,7 @@ mixin ProductPreview(obj)
               +e.IMG(src=require('assets/black-white.png'))
             +e.LABEL
               +e.IMG(src=require('assets/black-pink.png'))
+        +e.LABEL.size-charts Size charts
         +e.item-size-selection
-          +e.LABEL Size charts
-          +FramedSelect({ id: 'preview-size-list', width: '120px',options: [1, 2, 3, 4] })
+          +FramedSelect({ id: 'preview-size-list', width: '120px', options: [1, 2, 3, 4] })
           +Button({ id: 'preview-add-cart', text: 'Add to cart'})

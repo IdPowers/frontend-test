@@ -1,60 +1,126 @@
 include /blocks/light-input/light-input
+include /blocks/light-select/light-select
 include /blocks/cart-entry/cart-entry
+include /blocks/delete-dialog/delete-dialog
 
 mixin CartSidebar(obj)
   if !obj
     - obj = {}
+
+  -var cart = {
+  -  items: [
+  -    {
+  -      amount: 1,
+  -      image: require('assets/nike-in-cart.png'),
+  -      brand: 'NIKE',
+  -      name: 'Air Max Tavas SD',
+  -      size: '7.5',
+  -      price: 160
+  -    },
+  -    {
+  -      amount: 2,
+  -      image: require('assets/nike-in-cart.png'),
+  -      brand: 'NIKE2',
+  -      name: 'Air Max Tavas SDg',
+  -      size: '7.5',
+  -      price: 190
+  -    }
+  -  ]
+  -};
+  -var prices = cart.items.map(function(item) {
+  -  return item.price;
+  -});
+  -var total = prices.reduce(function(sum, current) {
+  -  return sum + current;
+  -});
+
   +b.cart-sidebar.ui.sidebar.right.inverted.vertical.menu
     +e.informations
       +e.header INFORMATIONS
       +e.title PERSONNAL INFORMATIONS
       +e.input-row
-        +LightInput({ placeholder: 'Country', class: 'flex-input_half-once' })
+        +LightSelect({
+          id: 'country-select',
+          placeholder: 'Country',
+          width: '48%',
+          options: [
+            'Australia',
+            'Azerbaijan',
+            'Angola',
+            'Armenia'
+          ]
+        })
       +e.input-row
-        +LightInput({ placeholder: 'First name', class: 'flex-input' })
-        +LightInput({ placeholder: 'Second name', class: 'flex-input' })
+        +LightInput({
+          placeholder: 'First name',
+          class: 'flex-input',
+          required: true
+        })
+        +LightInput({
+          placeholder: 'Second name',
+          class: 'flex-input',
+          required: true
+        })
       +e.input-row
-        +LightInput({ placeholder: 'Address', class: 'flex-input' })
+        +LightInput({
+          placeholder: 'Address',
+          class: 'flex-input',
+          required: true
+        })
       +e.input-row
-        +LightInput({ placeholder: 'Postal code', class: 'flex-input' })
-        +LightInput({ placeholder: 'City', class: 'flex-input' })
+        +LightInput({
+          placeholder: 'Postal code',
+          class: 'flex-input',
+          required: true
+        })
+        +LightInput({
+          placeholder: 'City',
+          class: 'flex-input',
+          required: true
+        })
       +e.input-row
-        +LightInput({ placeholder: 'Email', class: 'flex-input' })
-        +LightInput({ placeholder: 'Phone', class: 'flex-input' })
+        +LightInput({
+          placeholder: 'Email',
+          class: 'flex-input',
+          required: true
+        })
+        +LightInput({
+          placeholder: 'Phone',
+          class: 'flex-input',
+          required: true
+        })
       +e.title NOTES
       +e.input-row
-        +LightInput({ placeholder: 'Note', class: 'flex-input' })
+        +LightInput({
+          placeholder: 'Note',
+          class: 'flex-input',
+          required: true
+        })
       +e.title DELIVERY MODE
       +e.input-row
-        +LightInput({ placeholder: 'Delivery mode', class: 'flex-input_half-once' })
+        +LightSelect({
+          id: 'delivery-select',
+          width: '48%',
+          options: [
+            'Collisimo france, $ 20',
+          ]
+        })
     +e.cart-contents
       +e.title YOUR CART
       +e.UL.items-list
-        +e.LI.product-row
-          +CartEntry({
-            image: require('assets/nike-in-cart.png'),
-            brand: 'NIKE',
-            name: 'Air Max Tavas SD',
-            size: '7.5',
-            price: '$ 160.00'
-          })
-        +e.LI.product-row
-          +CartEntry({
-            image: require('assets/nike-in-cart.png'),
-            brand: 'NIKE',
-            name: 'Air Max Tavas SD',
-            size: '7.5',
-            price: '$ 160.00'
-          })
+        each item in cart.items
+          +e.LI.product-row
+            +CartEntry(item)
       +e.resume
         +e.resume-row
           +e.clause SHIPPING
           +e.cost $ 20.00
         +e.resume-row
           +e.clause SUBTOTAL
-          +e.cost $ 340.00
+          +e.cost= '$' + total
       +e.agreement
         +e.INPUT(type="checkbox")
         +e.SPAN I agree terms of use and privacy
       +e.confirmation
         +Button({ id: 'cart-confirm', text: 'Confirm'})
+  +DeleteDialog()

@@ -28,6 +28,9 @@ const baseConfig = {
       $: 'jquery',
       jQuery: 'jquery',
       jquery: 'jquery',
+      tether: 'tether',
+      "window.jQuery": "jquery",
+      "Tether": 'tether',
     })
   ],
   module: {
