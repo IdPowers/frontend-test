@@ -13,13 +13,13 @@ $bl = 'product-story'
     padding-left 50px
 
   &__content
-    padding-top 40px
-    display flex
-    flex-flow row
+    padding 40px 0
+    display table-row
 
   &__text
+    display table-cell
     max-width 320px
-    padding-top 40px
+    vertical-align middle
 
   &__title
     font-size 18px
@@ -57,11 +57,17 @@ $bl = 'product-story'
     font-weight 300
     font-family $font-roboto
 
+  &__product-image
+    display table-cell
+    vertical-align middle
+    padding-top 70px
+    width 100%
+    padding-right 20px
+
   &__panel
-    flex 1
-    display flex
-    flex-flow column
-    justify-content center
+    display table-cell
+    min-width 320px
+    vertical-align middle
 
   &__box
     padding 20px
@@ -117,13 +123,4 @@ $bl = 'product-story'
 
   &__size-selection
     margin-top 15px
-    display inline-flex
-
-@media (max-width: 1280px)
-  .{$bl}
-    &__product-image
-      line-height 550px
-      & img
-        height auto
-        vertical-align middle
-        width 350px
+    display inline-block

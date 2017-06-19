@@ -6,8 +6,10 @@ $color--dark-grey = #7B7B7B
 $color--primary = #2AA1C0
 $color--secondary = #0E647D
 
+$bl = 'checkbox'
+
 // Basic control styles
-.control
+.{$bl}
   display block
   position relative
   padding-left 30px
@@ -22,7 +24,7 @@ $color--secondary = #0E647D
 
 
 // Custom control
-.control__indicator
+.{$bl}__indicator
   position absolute
   top 2px
   left 0
@@ -33,25 +35,22 @@ $color--secondary = #0E647D
   &_invalid
     border 1px solid #e43540
 
-  .control--radio &
-    border-radius 50% // Makes radio buttons circlular
-
   // Hover and focus
-  .control:hover input ~ &,
-  .control input:focus ~ &
+  .checkbox:hover input ~ &,
+  .checkbox input:focus ~ &
     background $color--grey
 
   // Checked
-  .control input:checked ~ &
+  .checkbox input:checked ~ &
     background $color--primary
 
   // Hover when checked
-  .control:hover input:not([disabled]):checked ~ &,
-  .control input:checked:focus ~ &
+  .checkbox:hover input:not([disabled]):checked ~ &,
+  .checkbox input:checked:focus ~ &
     background $color--secondary
 
   // Hide default browser input
-  .control input:disabled ~ &
+  .checkbox input:disabled ~ &
     background $color--light-grey
     opacity 0.6
     pointer-events none
@@ -61,11 +60,11 @@ $color--secondary = #0E647D
     position absolute
     display none // Hide check
 
-    .control input:checked ~ &
+    .checkbox input:checked ~ &
       display block // Show check
 
     // Checkbox tick
-    .control--checkbox &
+    .checkbox &
       left 7px
       top 2px
       width 7px
@@ -75,18 +74,5 @@ $color--secondary = #0E647D
       transform rotate(45deg)
 
     // Disabled tick colour
-    .control--checkbox input:disabled ~ &
+    .checkbox input:disabled ~ &
       border-color $color--dark-grey
-
-    // Radio button inner circle
-    .control--radio &
-      left 7px
-      top 7px
-      height 6px
-      width 6px
-      border-radius 50%
-      background $color--white
-
-    // Disabled circle colour
-    .control--radio input:disabled ~ &
-      background $color--dark-grey
