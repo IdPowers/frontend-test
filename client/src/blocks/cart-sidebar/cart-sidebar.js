@@ -29,6 +29,7 @@ $('.cart-sidebar__items-list').on('click', '.cart-entry__decrease-btn', (e) => {
     $currentAmount.text(productAmount - 1);
   } else {
     $deletingEntry = $cartEntry;
+    $('#delete-dialog .modal-dialog').css({ top: $(window).scrollTop() });
     $('#delete-dialog').modal('show');
   }
 });

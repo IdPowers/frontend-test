@@ -1,6 +1,7 @@
 mixin FramedSelect(obj)
   if !obj
     - obj= {}
-  +b.SELECT.framed-select(id=obj.id || false, data-width=obj.width || '100%')
+  +b.framed-select
+    +e.SELECT(id=obj.id || false, data-width=obj.width || '100%')
       each item in obj.options
         +e.OPTION= item

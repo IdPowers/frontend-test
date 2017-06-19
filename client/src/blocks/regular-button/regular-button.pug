@@ -1,4 +1,4 @@
-mixin Button(obj)
+mixin RegularButton(obj)
   if !obj
     - obj = {}
   +b.BUTTON.regular-button(id=obj.id || false)= obj.text || ''

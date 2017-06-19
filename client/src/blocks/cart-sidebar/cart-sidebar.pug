@@ -94,7 +94,7 @@ mixin CartSidebar(obj)
       +e.input-row
         +LightInput({
           placeholder: 'Note',
-          class: 'flex-input',
+          class: 'flex-input_once',
           required: true
         })
       +e.title DELIVERY MODE
@@ -125,5 +125,5 @@ mixin CartSidebar(obj)
           required: true
         })
       +e.confirmation
-        +Button({ id: 'cart-confirm', text: 'Confirm'})
+        +RegularButton({ id: 'cart-confirm', text: 'Confirm' })
   +DeleteDialog()

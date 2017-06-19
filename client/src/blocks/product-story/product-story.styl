@@ -26,12 +26,13 @@ $bl = 'product-story'
     font-family $font-din-pro-cond
     color #666
     padding-top 30px
+    text-transform uppercase
 
-  &__big-title
-    font-size 24px
-    font-weight 500
-    font-family $font-din-pro-cond
-    padding-bottom 20px
+    &_big
+      font-size 24px
+      font-weight 500
+      font-family $font-din-pro-cond
+      padding-bottom 20px
 
   &__description
     font-size 14px
@@ -39,6 +40,10 @@ $bl = 'product-story'
     font-family $font-roboto
     font-weight 300
     letter-spacing .25px
+
+  &__benefits-list
+    list-style none
+    padding-left 0
 
   &__benefit
     font-size 18px
@@ -85,17 +90,18 @@ $bl = 'product-story'
     color #666
     padding-bottom 40px
 
-    & label
-      color #039be5
-      cursor pointer
-      font-weight 500
+  &__color-label
+    color #039be5
+    cursor pointer
+    font-weight 500
+    text-transform uppercase
 
-    & label + label
+    & + &
       margin-left 10px
 
-    input[name="colors"]
-      visibility hidden
-      margin-left -15px
+  &__color-checkbox
+    visibility hidden
+    margin-left -15px
 
   &__price-line
     font-family $font-din-pro-cond
