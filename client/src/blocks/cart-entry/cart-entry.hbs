@@ -1,37 +1,37 @@
 <li class="cart-sidebar__product-row">
-    <div class="cart-entry" id="{{ item.id }}">
-        <div class="cart-entry__counter">
-            <div class="cart-entry__increase-btn">
-                <img src={{ staticImages.plusIcon }}>
-            </div>
-            <div class="cart-entry__amount">
-                {{ item.amount }}
-            </div>
-            <div class="cart-entry__decrease-btn">
-                <img src={{ staticImages.lessIcon }}>
-            </div>
-        </div>
-        <div class="cart-entry__product-image">
-            <img src={{ item.image }}>
-        </div>
-        <div class="cart-entry__description">
-            <div class="cart-entry__brand">
-                {{ item.brand }}
-            </div>
-            <div class="cart-entry__name">
-                {{ item.name }}
-            </div>
-        </div>
-        <div class="cart-entry__product-size-title">
-            SIZE
-        </div>
-        <div class="cart-entry__product-size">
-            <span class="cart-entry__size-val">
-                {{ item.size }}
-            </span>
-        </div>
-        <div class="cart-entry__price">
-            $ {{ item.price }}
-        </div>
+  <div class="cart-entry" id="{{ item.id }}">
+    <div class="cart-entry__counter">
+      <div class="cart-entry__increase-btn">
+        <img src={{ staticImages.plusIcon }}>
+      </div>
+      <div class="cart-entry__amount">
+        {{ item.amount }}
+      </div>
+      <div class="cart-entry__decrease-btn">
+        <img src={{ staticImages.lessIcon }}>
+      </div>
     </div>
+    <div class="cart-entry__product-image">
+      <img src={{ item.image }}>
+    </div>
+    <div class="cart-entry__description">
+      <div class="cart-entry__brand">
+        {{ item.brand }}
+      </div>
+      <div class="cart-entry__name">
+        {{ item.name }}
+      </div>
+    </div>
+    <div class="cart-entry__product-size-title">
+      SIZE
+    </div>
+    <div class="cart-entry__product-size">
+      <span class="cart-entry__size-val">
+        {{ item.size }}
+      </span>
+    </div>
+    <div class="cart-entry__price">
+      $ {{ item.price }}
+    </div>
+  </div>
 </li>
