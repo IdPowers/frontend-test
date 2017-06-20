@@ -7,34 +7,6 @@ include /blocks/checkbox/checkbox
 mixin CartSidebar(obj)
   if !obj
     - obj = {}
-
-  -var cart = {
-  -  items: [
-  -    {
-  -      amount: 1,
-  -      image: require('assets/nike-in-cart.png'),
-  -      brand: 'NIKE',
-  -      name: 'Air Max Tavas SD',
-  -      size: '7.5',
-  -      price: 160
-  -    },
-  -    {
-  -      amount: 2,
-  -      image: require('assets/nike-in-cart.png'),
-  -      brand: 'NIKE2',
-  -      name: 'Air Max Tavas SDg',
-  -      size: '7.5',
-  -      price: 190
-  -    }
-  -  ]
-  -};
-  -var prices = cart.items.map(function(item) {
-  -  return item.price;
-  -});
-  -var total = prices.reduce(function(sum, current) {
-  -  return sum + current;
-  -});
-
   +b.cart-sidebar.ui.sidebar.right.inverted.vertical.menu
     +e.informations
       +e.header INFORMATIONS
@@ -109,16 +81,18 @@ mixin CartSidebar(obj)
     +e.cart-contents
       +e.title YOUR CART
       +e.UL.items-list
-        each item in cart.items
-          +e.LI.product-row
-            +CartEntry(item)
+        //each item in cart.items
+        //  +e.LI.product-row
+        //    +CartEntry(item)
       +e.resume
         +e.resume-row
           +e.clause SHIPPING
           +e.cost $ 20.00
         +e.resume-row
           +e.clause SUBTOTAL
-          +e.cost= '$' + total
+          +e.cost
+            +e.SPAN= '$ '
+            +e.SPAN#resume-subtotal= '20.00'
       +e.agreement
         +Checkbox({
           text: 'I agree terms of use and privacy',

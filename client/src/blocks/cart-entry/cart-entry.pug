@@ -3,9 +3,11 @@ mixin CartEntry(obj)
     - obj = {}
   +b.cart-entry(id= obj.id)
     +e.counter
-      +e.increase-btn(src=require('assets/plus.png'))
+      +e.increase-btn
+        img(src=require('assets/plus.png'))
       +e.amount= obj.amount
-      +e.decrease-btn(src=require('assets/less.png'))
+      +e.decrease-btn
+        img(src=require('assets/less.png'))
     +e.product-image
       +e.IMG(src=obj.image)
     +e.description
@@ -15,3 +17,4 @@ mixin CartEntry(obj)
     +e.product-size
       +e.SPAN.size-val= obj.size
     +e.price= '$ ' + obj.price
+

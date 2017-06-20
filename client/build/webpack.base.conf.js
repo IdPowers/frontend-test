@@ -52,6 +52,13 @@ const baseConfig = {
         },
       },
       {
+        test: /\.(handlebars|hbs)$/,
+        loader: "handlebars-loader",
+        options: {
+          root: resolve('src'),
+        },
+      },
+      {
         test: /icons\/.*\.svg?$/,
         loader: 'svg-sprite-loader',
         query: {
