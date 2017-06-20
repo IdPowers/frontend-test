@@ -1,4 +1,52 @@
+include /blocks/framed-select/framed-select
+include /blocks/regular-button/regular-button
+
 mixin ProductStory(obj)
   if !obj
     - obj = {}
   +b.product-story
+    +e.centerer
+      +e.content
+        +e.text
+          +e.title story
+          +e.title_big nike air max origins
+          +e.description.
+            Nike's revolutionary Air-Sole unit made its way into Nike footwear in the late '70s.
+            In 1987, the Nike Air Max 1 debuted with visible air in its heel,
+            allowing fans more than just the feel of Air-Sole comfort
+          +e.title benefits
+          +e.UL.benefits-list
+            +e.LI.benefit-description
+              +e.benefit Layered textile/synthetic upper
+              +e.details for lightweight durability and comfort
+            +e.LI.benefit-description
+              +e.benefit Injected Phylon midsole doubles
+              +e.details Outsole to reduce the overall weight of the shoe
+            +e.LI.benefit-description
+              +e.benefit Max Air heel unit
+              +e.details delivers maximum lightweight cushioning
+            +e.LI.benefit-description
+              +e.benefit Rubber Waffle outsole
+              +e.details Durable, multi-surface traction
+        +e.IMG.product-image(src=require('assets/sneakers-pair.png'))
+        +e.panel
+          +e.box
+            +e.brand nike
+            +e.name Air Max Tavas SD
+            +e.colors-plain-list
+              +e.LABEL.color-label
+                +e.INPUT.color-checkbox(type="radio" name="colors" value="0" checked)
+                +e black/pink
+              +e.LABEL.color-label
+                +e.INPUT.color-checkbox(type="radio" name="colors" value="1")
+                +e pow/tour
+              +e.LABEL.color-label
+                +e.INPUT.color-checkbox(type="radio" name="colors" value="2")
+                +e yellow/white
+            +e.preview-product-image(src=require('assets/sneaker-min.png'))
+            +e.price-line
+              +e.SPAN EN STOCK
+              +e.SPAN $ 160.00
+            +e.size-selection
+              +FramedSelect({id: 'story-size-list', width: '120px', options: [1, 2, 3, 4]})
+              +RegularButton({id: 'story-add-cart', text: 'Add to cart'})

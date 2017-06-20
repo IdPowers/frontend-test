@@ -1,0 +1,9 @@
+mixin DeleteDialog()
+  +b.delete-dialog.modal.fade#delete-dialog(role="dialog", aria-hidden="true")
+    .modal-dialog.modal-sm
+      .modal-content
+        .text.
+          Are you sure you want to delete this item from your cart?
+      .modal-footer
+        +RegularButton({ id: 'confirm-delete', text: 'Delete' })
+        +RegularButton({ id: 'close-delete', text: 'Close' })

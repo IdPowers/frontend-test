@@ -1,0 +1,4 @@
+mixin LightInput(obj)
+  if !obj
+    - obj = {}
+  +b.INPUT.light-input(value= obj.val || '', placeholder=obj.placeholder || false, class=obj.class, required=obj.required || false)
