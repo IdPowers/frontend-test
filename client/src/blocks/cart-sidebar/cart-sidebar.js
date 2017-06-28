@@ -92,7 +92,8 @@ $('#cart-confirm').on('click', () => {
     }
   });
 
-  if ($('.checkbox input').is(':checkbox')) {
+  const requiredCheckbox = $('.checkbox input[required]');
+  if (requiredCheckbox.is(':checkbox') && !requiredCheckbox.is(':checked')) {
     $('.checkbox__indicator').addClass('checkbox__indicator_invalid');
   }
 });
