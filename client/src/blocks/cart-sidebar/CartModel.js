@@ -33,40 +33,43 @@ export default class CartModel {
     this.products.push(newProduct);
   }
 
-  getCurrentProductAmount(productId) {
+  getProduct(productId) {
     const idx = this.products.findIndex((elem) => {
       return elem.id === productId;
     });
 
-    return this.products[idx].amount;
+    return idx !== -1 ? this.products[idx] : null;
+  }
+
+  getCurrentProductAmount(productId) {
+    const product = this.getProduct(productId);
+    return product ? product.amount : 0;
   }
 
   increaseCountOf(productId) {
-    const idx = this.products.findIndex((elem) => {
-      return elem.id === productId;
-    });
-    if (idx !== -1) {
-      this.products[idx].amount += 1;
+    const product = this.getProduct(productId);
+    if (product) {
+      product.amount += 1;
     }
 
-    return this.products[idx].amount;
+    return product.amount;
   }
 
   decreaseCountOf(productId) {
-    const idx = this.products.findIndex((elem) => {
-      return elem.id === productId;
-    });
-    if (idx !== -1 && this.products[idx].amount > 1) {
-      this.products[idx].amount -= 1;
+    const product = this.getProduct(productId);
+    if (product && product.amount > 1) {
+      product.amount -= 1;
     }
 
-    return this.products[idx].amount;
+    return product.amount;
   }
 
   removeProduct(productId) {
-    this.products = this.products.filter((item) => {
-      return item.id !== productId;
-    });
+    let i = 0;
+    while (i < this.products.length) {
+      if (this.products[i].id === productId) this.products.splice(i, 1);
+      else i += 1;
+    }
   }
 
   getSubtotal() {
