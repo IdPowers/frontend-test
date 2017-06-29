@@ -1,5 +1,6 @@
 const path = require('path');
 const utils = require('./utils');
+const webpack = require('webpack');
 const eslintFriendlyFormatter = require('eslint-friendly-formatter');
 const config = require('../config');
 
@@ -22,6 +23,16 @@ const baseConfig = {
     extensions: ['.js', '.json'],
     modules: ['node_modules', 'src'],
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      jquery: 'jquery',
+      tether: 'tether',
+      "window.jQuery": "jquery",
+      "Tether": 'tether',
+    })
+  ],
   module: {
     rules: [
       {
@@ -36,6 +47,13 @@ const baseConfig = {
       {
         test: /\.(pug|jade)$/,
         loader: 'pug-loader',
+        options: {
+          root: resolve('src'),
+        },
+      },
+      {
+        test: /\.(handlebars|hbs)$/,
+        loader: "handlebars-loader",
         options: {
           root: resolve('src'),
         },

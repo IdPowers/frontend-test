@@ -1,0 +1,9 @@
+mixin LightSelect(obj)
+  if !obj
+    - obj= {}
+  +b.light-select
+    +e.SELECT(id=obj.id || false, data-width=obj.width || '100%', data-placeholder=obj.placeholder)
+      if (obj.placeholder)
+        +e.OPTION
+      each item in obj.options
+        +e.OPTION= item
