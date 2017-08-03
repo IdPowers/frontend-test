@@ -1,0 +1,258 @@
+.product-preview {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  
+  background-color: @bgcolor-white;
+}
+
+.product-preview__photo {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.product-preview__descr {
+  width: 100%;
+  text-align: center;
+}
+
+.product-preview__wish {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  
+  font-size: 0;
+  border: 1px solid #e4e4e4;
+  background: url("../img/icons/heart-wish.svg") no-repeat center center;
+  cursor: pointer;
+  
+  &:hover {
+    border-color: #cacaca;
+    transition: 0.5s;
+  }
+}
+
+.product-preview__name {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  
+  font-family: @font-din-pro-cond;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.product-preview__price {
+  display: inline-block;
+  margin-bottom: 5px;
+  
+  font-family: @font-din-pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #666666;
+}
+
+.product-preview__colors {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  
+  font-family: @font-din-pro;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #666666;
+  
+  & span {
+    color: #0089cf;
+  }
+}
+
+.product-preview__image {
+  display: inline-block;
+  
+  margin: 0;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  padding: 0;
+  
+  width: 45px;
+  height: 45px;
+  
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border: 1px solid #e4e4e4;
+  
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  
+  &:hover {
+    border-color: #bebebe;
+    transition: 0.5s;
+  }
+  
+  &:last-child {
+    margin-right: 0px;
+  }
+  
+  &--active {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+  }
+  
+  img {
+    display: block;
+    width: 40px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+
+.product-preview__size-text {
+  display: block;
+  font-family: @font-roboto;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #666666;
+}
+
+.product-preview__btn-add {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+@media @tablet {
+  
+  .product-preview {
+    flex-direction: row;
+    padding-top: 60px;
+    padding-bottom: 150px;
+  }
+  
+  .product-preview__photo {
+    width: 50%;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  .product-preview__descr {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .product-preview__wish {
+    margin: 0 0;
+    margin-bottom: 40px;
+  }
+  
+  .product-preview__name {
+    margin-bottom: 10px;
+    
+    font-family: @font-din-pro-cond;
+    font-size: 35px;
+    line-height: 35px;
+    
+     & span {
+      display: block;
+      font-size: 25px;
+    }  
+  }
+  
+  .product-preview__price {
+    margin-bottom: 20px;
+    
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .product-preview__colors {
+    margin-bottom: 15px;
+    
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  
+  .product-preview__image {
+    margin-bottom: 10px;
+    padding: 0;
+    
+    width: 78px;
+    height: 78px;
+  
+    img {
+      width: 62px;
+      margin-top: 25px;
+    }
+  }
+
+  .product-preview__select-wrapper {
+    margin-bottom: 0;
+  }
+
+  .product-preview__size-select {
+    padding-right: 80px;
+  }
+
+  .product-preview__btn-add {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media @desktop {
+  
+  .product-preview {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .product-preview__photo {
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+
+@media @wide-desktop {
+  
+  .product-preview {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .product-preview__photo {
+    
+     img {
+      width: 638px;
+      height: 296px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.product-social {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: @bgcolor-white;
+}
+
+.product-social__head {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  
+  font-family: @font-din-pro-cond;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.product-social__hashtag {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: @font-din-pro-cond;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: @text-color;
+}
+
+.product-social__image {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  
+  
+  img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    opacity: 0.2;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media @tablet {
+  
+  .product-social__image {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    img {
+      width: 280px;
+      height: 280px;
+      margin: 0 0;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media @desktop {
+  
+  .product-social {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 100px;
+    padding-bottom: 190px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+
+@media @wide-desktop {
+  .product-social {
+    width: 1180px;
+    margin: 0 auto;
+  }
+  
+  .product-social__image {
+    justify-content: flex-start;
+  
+    img {
+      width: 280px;
+      margin: 0 0;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    
+     a {
+      margin-right: 20px;
+      margin-bottom: 20px;
+      
+      &:nth-child(4n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}

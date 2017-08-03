@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.social__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  
+  font-size: 0;
+  
+  cursor: pointer;
+  border: 2px solid @bgcolor-blue;
+  border-radius: 7px;
+  
+  &:last-child {
+    margin-right: 0px;
+  }
+  
+  &:hover {
+    border-color: #ffffff;
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+  
+  &--vk {
+    background: url("../img/icons/vk.svg") no-repeat center center;
+    background-size: 20px 20px;
+  }
+  
+  &--inst {
+    background: url("../img/icons/inst.svg") no-repeat center center;
+    background-size: 20px 20px;
+  }
+}

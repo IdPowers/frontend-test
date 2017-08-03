@@ -1,0 +1,186 @@
+.sign {
+  position: fixed;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: auto;
+  
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  
+  border-top: 5px solid @text-blue;
+  border-bottom: 3px solid @text-blue;
+  background-color: #ffffff;
+  
+  z-index: 10;
+  
+  &--opened {
+    display: block;
+    animation: zoomInUp 0.5s;
+  }
+  
+  &--aclosed {
+     animation: zoomOutUp 0.5s;
+  }
+  
+  &--closed {
+    display: none;
+  }
+}
+
+.sign__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  width: 30px;
+  height: 30px;
+  
+  font-size: 0;
+  background-color: @text-blue;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  
+  
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 3px;
+    
+    width: 25px;
+    height: 1px;
+    
+    transform: rotate(45deg);
+    background-color: #ffffff;
+  }
+  
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.sign__slogan {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  
+  font-family: @font-din-pro-cond;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0px;
+  
+  color: @text-blue;
+  text-transform: uppercase;
+}
+
+.sign__form input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  font-family: @font-roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #333333;
+  
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  
+  &::-webkit-input-placeholder {
+    font-family: @font-roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #b9b9b9;
+  }
+  
+  &::-moz-placeholder {
+    font-family: @font-roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #b9b9b9;
+  }
+  
+  &:-moz-placeholder {
+    font-family: @font-roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #b9b9b9;
+  }
+  
+  &:-ms-input-placeholder {
+    font-family: @font-roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #b9b9b9;
+  }
+  
+  &:focus {
+    border-color: #a7a7a7;
+    transition: 0.5s;
+  }
+}
+
+.sign__forgot-wrapper {
+  margin: 0;
+  padding: 0;
+  
+  margin-top: 40px;
+  margin-left: -25px;
+  margin-right: -25px;
+  
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+  text-align: center;
+  background-color: #E9E9E9;
+}
+
+.sign__forgot {
+  font-family: @font-roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 35px;
+  color: #666666;
+  text-decoration: none;
+  border-bottom: 1px dotted #666666;
+  
+  &:hover {
+    color: @text-blue;
+    border: none;
+    transition: 0.3s;
+  }
+}
+
+@media @portrait-orientation {
+  .sign {
+  height: 100vh;
+  }
+}
+
+@media @tablet {
+  .sign  {
+    top: 30%;
+    width: 450px;
+    height: auto;
+    left: 50%;
+    margin-left: -225px;
+  }
+}
