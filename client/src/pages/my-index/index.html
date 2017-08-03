@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike - sneakers</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+
+ <!--Header Start -->
+  <header class="header">
+    <figure class="header__logo">
+      <img src="img/logo.svg" alt="Logo company" width="50" height="50">
+    </figure>
+    <nav class="header__nav  header__nav--closed  header__nav--nojs">
+     <button class="header__toggle" type="button">Открыть меню<span></span></button>
+      <ul class="header__list">
+        <li class="header__item  header__item--active"><a>Footwear</a></li>
+        <li class="header__item"><a href="#">Clothing</a></li>
+        <li class="header__item"><a href="#">Accessories</a></li>
+        <li class="header__item"><a href="#">Brands</a></li>
+        <li class="header__item"><a href="#">Exclusive</a></li>
+      </ul>
+      <ul class="header__user-list">
+        <li class="header__user-item">
+          <a class="header__user-search" href="#">Search</a>
+          <div class="header__search-block  header__search-block--closed">
+            <form action="http://echo.htmlacademy.ru/">
+              <input class="header__search-input" type="text" name="search" placeholder="Enter text">
+            </form>
+          </div>
+        </li>
+        <li class="header__user-item"><a class="header__user-cart" href="#">Cart <span class="header__cart-quantity">(12)</span></a></li>
+        <li class="header__user-item"><a class="header__user-sign" href="#">Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+ <!--Header End -->
+ 
+ <!--Product preview Start -->
+ <section class="product-preview">
+   <figure class="product-preview__photo">
+     <img src="img/product-preview.png" alt="Photo Nike Air Max" width="1548" height="716">
+   </figure>
+   <div class="product-preview__descr">
+     <span class="product-preview__wish">Add wish list</span>
+     <h1 class="product-preview__name"><span>Nike</span> air max tavas sd</h1>
+     <span class="product-preview__price">$ 160.00</span>
+     <p class="product-preview__colors">Colors - <span>black/pink pow/tour yellow/white</span></p>
+     <div class="product-preview__image-wrapper">
+       <figure class="product-preview__image  product-preview__image--active">
+         <img src="img/product-preview.png" alt="Nike air max tavas sd pink pow" width="1548" height="716">
+       </figure>
+       <figure class="product-preview__image">
+         <img src="img/product-preview.png" alt="Nike air max tavas sd black" width="1548" height="716">
+       </figure>
+     </div>
+     <div class="product-preview__size">
+      <label class="product-preview__size-text" for="size-select">Size charts</label>
+      <div class="size">
+       <select class="size__select" name="product-size" id="size-select">
+         <option value="0" selected disabled>Size</option>
+         <option value="7.5">7.5</option>
+         <option value="8">8.0</option>
+         <option value="8.5">8.5</option>
+         <option value="9">9.0</option>
+       </select>
+       </div>
+       <button class="btn  product-preview__btn-add" type="button">Add to cart</button>
+     </div>
+     <div id="share">
+	   <div class="share__like">Liked? Share it with your friends!</div>
+       <div class="share__social" data-url="http://webliberty.ru/share/" data-title="Кнопки поделиться в социальных сетях">
+		  <a class="share__push share__push--facebook" data-id="fb"><i class="fa fa-facebook"></i> Facebook</a>
+		  <a class="share__push share__push--twitter" data-id="tw"><i class="fa fa-twitter"></i> Twitter</a>
+		  <a class="share__push share__push--vkontakte" data-id="vk"><i class="fa fa-vk"></i> VK</a>
+		  <a class="share__push share__push--google" data-id="gp"><i class="fa fa-google-plus"></i> Google+</a>
+		  <a class="share__push share__push--ok" data-id="ok"><i class="fa fa-odnoklassniki"></i> OK</a>
+	  </div>
+     </div>
+   </div>
+ </section>
+ <!--Product preview End -->
+ 
+ <!--Feat Start -->
+ <section class="feat">
+   <h3 class="feat__slogan">CLASSIC CUSHIONING. MODERN COMFORT.</h3>
+   <p class="feat__text">The Nike Air Max Tavas SD Men's Shoe recalls the profile of the iconic running original with a Max Air unit in the heel and multi-surface Waffle outsole. A lightweight upper and gradient detail offer a comfortable fit and dynamic look.</p>
+ </section>
+ <!--Feat End -->
+ 
+ <!--Product story Start -->  
+ <section class="product-story">
+   <div class="product-story__descr">
+     <h2 class="product-story__head">story</h2>
+     <h3 class="product-story__slogan">NIKE AIR MAX ORIGINS</h2>
+     <p class="product-story__text">Nike's revolutionary Air-Sole unit made its way into Nike footwear in the late '70s. In 1987, the Nike Air Max 1 debuted with visible air in its heel, allowing fans more than just the feel of Air-Sole comfort</p>
+     
+     <h2 class="product-story__head  product-story__head--benefits">BENEFITS</h2>
+     <h3 class="product-story__slogan-benefits">Layered textile/synthetic upper</h3>
+     <p class="product-story__text-benefits">for lightweight durability and comfort</p>
+
+     <h3 class="product-story__slogan-benefits">Injected Phylon midsole doubles</h3>
+     <p class="product-story__text-benefits">Outsole to reduce the overall weight of the shoe</p>
+     
+     <h3 class="product-story__slogan-benefits">Max Air heel unit</h3>
+     <p class="product-story__text-benefits">delivers maximum lightweight cushioning</p>
+     
+     <h3 class="product-story__slogan-benefits">Rubber Waffle outsole</h3>
+     <p class="product-story__text-benefits">Durable, multi-surface traction</p>
+   </div>
+   
+   <figure class="product-story__photo">
+     <img src="img/product-story-photo.png" alt="Nike sneakers photo" width="843" height="660">
+   </figure>    
+   
+   <div class="product-card">
+     <h2 class="product-card__slogan">Nike <span>Air max Tavas SD</span></h2>
+     <p class="product-card__colors">Black/Pink Pow/Tour Yellow/White</p>
+     
+     <figure class="product-card__photo">
+       <img src="img/product-preview.png" alt="Nike air max tavas sd" width="1548" height="716">
+     </figure>
+     
+     <div class="product-card__stock">
+       <span class="product-card__stock-text">EN STOCK</span>
+       <span class="product-card__stock-price">$ 160.00</span>
+     </div>
+    
+    <div class="product-card__size-wrapper">
+     <div class="size">
+       <select class="size__select  size__select-small" name="product-size" id="size-select">
+         <option value="0" selected disabled>Size</option>
+         <option value="7.5">7.5</option>
+         <option value="8">8.0</option>
+         <option value="8.5">8.5</option>
+         <option value="9">9.0</option>
+       </select>
+       </div>
+       <button class="btn  btn--small" type="button">Add to cart</button>
+    </div>
+     
+   </div>
+ </section>
+ <!--Product story End -->
+ 
+ <!--Product social Start -->
+ <section class="product-social">
+   <h2 class="product-social__head">story</h2>  
+   <span class="product-social__hashtag">#Nikeairmax</span>
+   <div class="product-social__image">
+    <a data-fancybox="gallery" href="img/photo-1.jpg">
+     <img src="img/photo-1.jpg" alt="Nike Sneakers Photo" width="280" height="280">
+    </a>
+    <a data-fancybox="gallery" href="img/photo-2.jpg">
+     <img src="img/photo-2.jpg" alt="Nike Sneakers Photo" width="280" height="280">
+    </a>
+    <a data-fancybox="gallery" href="img/photo-3.jpg">
+     <img src="img/photo-3.jpg" alt="Nike Sneakers Photo" width="280" height="280">
+    </a>
+    <a data-fancybox="gallery" href="img/photo-4.jpg">
+     <img src="img/photo-4.jpg" alt="Nike Sneakers Photo" width="280" height="280">
+    </a>
+   </div>
+ </section>  
+ <!--Product social End -->
+ 
+ <!--Footer Start-->
+ <footer class="footer">
+  <div class="social">
+    <a class="social__icon  social__icon--vk" href="http://vk.com/nikitka.sobolev" target="_blank">ВКонтакте</a>
+    <a class="social__icon  social__icon--inst" href="http://instagram.com/n.sobolev" target="_blank">Instagramm</a>
+  </div>
+   <p class="footer__made">Made with <span class="footer__heart"></span> in Kirov</p>
+   <p class="footer__copyright">© 2017 <a href="http://sobolevn.ru/" target="_blank">NSobolev</a></p>
+ </footer>
+ <!--Footer End-->
+ 
+ <!--Cart Start-->
+ <div class="cart  cart--closed">
+   <button class="cart__close" type="button">Close cart</button>
+   <h2 class="cart__slogan">Informations</h2>
+   <p class="cart__text">Personnal informations</p>
+   <form class="cart__form" action="http://echo.htmlacademy.ru/" method="post">
+     <div class="cart__country">
+       <select class="cart__country-select" name="country">
+         <option value="country" selected disabled>Country</option>
+         <option value="russia">Russia</option>
+         <option value="belarus">Belarus</option>
+         <option value="china">China</option>
+       </select>
+     </div>
+     <input class="cart__input  cart__input--name" type="text" data-validation="length" data-validation-length="min2" name="fname" placeholder="First name" required>
+     <input class="cart__input  cart__input--sname" type="text" data-validation="length" data-validation-length="min2" name="sname" placeholder="Second name" required>
+     <input class="cart__input  cart__input--adress" type="text" data-validation="length" data-validation-length="min4" name="adress" placeholder="Adress" required>
+     <input class="cart__input  cart__input--code" type="text" data-validation="length number" data-validation-length="min4" name="code" placeholder="Postal code" required>
+     <input class="cart__input  cart__input--city" type="text" data-validation="length" data-validation-length="min2" name="city" placeholder="City" required>
+     <input class="cart__input  cart__input--email" type="text" data-validation="email" name="email" placeholder="Email" required>
+     <input class="cart__input  cart__input--phone" type="text" data-validation="length number" data-validation-length="min4" name="phone" placeholder="Phone" required>
+     <p class="cart__text">Notes</p>
+     <input class="cart__input" type="text" data-validation="length" data-validation-length="min1" name="notes" placeholder="Notes" required>
+     <p class="cart__text">Delivery mode</p>
+     <div class="cart__delivery">
+       <select class="cart__delivery-select" name="delivery">
+         <option value="cfrance20">Collisimo france, <span class="cart__delivery-price">$20.00</span></option>
+         <option value="cfrance40">Collisimo france, <span class="cart__delivery-price">$40.00</span></option>
+         <option value="cfrance80">Collisimo france, <span class="cart__delivery-price">$80.00</span></option>
+       </select>
+     </div>
+     <div class="cart__in">
+       <p class="cart__text">Your cart</p>
+       <table class="cart__table">
+         <tr class="cart__row" id="1">
+           <td class="cart__quantity">
+             <span class="cart__plus">+</span>
+             <input class="cart__in-count" type="text" name="count1" value="1" data-summ="105">
+             <span class="cart__minus">-</span>
+           </td>
+           
+           <td class="cart__in-image">
+             <img src="img/de-cran.jpg" alt="Comme Des Garcons Play" width="55" height="33">
+           </td>
+           
+           <td class="cart__in-description">
+           <p class="cart__in-name">Comme des Garçons Play</p>
+           <p class="cart__in-text">Rod Laver Vintage - exclusive</p>   
+           </td>
+           
+           <td class="cart__size">
+             <span class="cart__size-caption">SIZE</span>
+             <input class="cart__in-size" type="text" name="size1" value="7.5">
+           </td>
+           
+           <td class="cart__summa">
+             <span class="cart__in-sum">$ <span class="cart__in-sum-js">105.00</span></span> 
+           </td>
+         </tr>
+         
+         <tr class="cart__row" id="2">
+            <td class="cart__quantity">
+             <span class="cart__plus">+</span>
+             <input class="cart__in-count" type="text" name="count2" value="1" data-summ="160">
+             <span class="cart__minus">-</span>
+           </td>
+           
+           <td class="cart__in-image">
+             <img src="img/product-preview.png" alt="Comme Des Garcons Play">
+           </td>
+           
+           <td class="cart__in-description">
+           <p class="cart__in-name">Nike</p>
+           <p class="cart__in-text">Air Max Tavas SD</p>   
+           </td>
+           
+           <td class="cart__size">
+             <span class="cart__size-caption">SIZE</span>
+             <input class="cart__in-size" type="text" name="size2" value="7.5">
+           </td>
+           
+           <td class="cart__summa">
+             <span class="cart__in-sum">$ <span class="cart__in-sum-js">160.00</span></span> 
+           </td>
+         </tr>
+       <tfoot>
+         <tr>
+           <td colspan="4" class="cart__shipping">Shipping</td>
+           <td class="cart__shipping-sum">$ 20.00</td>
+         </tr>
+         <tr>
+           <td colspan="4" class="cart__subtotal">Subtotal</td>
+           <td class="cart__subtotal-sum">$ <span class="cart__subtotal-js">265.00</span></td>
+         </tr>
+       </tfoot>
+      </table>
+     <div class="cart__terms">
+       <label class="cart__terms-slogan">
+       <input class="cart__terms-checkbox" type="checkbox" name="terms" required>
+       <span class="cart__indicator-checkbox"></span>I agree <a href="#">terms of use and privacy</a></label>
+     </div>
+     <div class="cart__btn-wrapper">
+       <button class="btn  btn--cart" type="submit">Confirm</button>
+     </div>
+   </form>
+  </div>
+</div>
+ <!--Cart End-->
+ 
+  <!--Sign Start-->
+ <div class="sign  sign--closed">
+   <span class="sign__close">Close</span>
+   <h2 class="sign__slogan">Login to you account</h2>
+   <form class="sign__form" action="http://echo.htmlacademy.ru/" method="post">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" class="btn  btn--sign">Login</button>
+   </form>
+   <p class="sign__forgot-wrapper"><a class="sign__forgot" href="#">Forgot your password?</a></p>
+ </div>
+ <!--Sign End-->
+ 
+ <div class="warning">
+   <h2 class="warning__slogan">Delete the product?</h2>
+   <div class="warning__links">
+     <a class="btn btn--cart-item-del" href="#">Yes</a>
+     <a class="btn btn--cancel" href="#">Cancel</a>
+   </div>
+ </div>
+ 
+ <!--Overlay Start-->
+ <div class="overlay"></div>
+ <!--Overlay End-->
+ 
+ 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.fancybox.min.js"></script> 
+<script src="js/main.js"></script>
+<script src="js/share.js"></script>
+<script src="js/jquery.form-validator.min.js"></script>
+<script>
+    $.validate({
+        modules : 'date, security'
+    });
+</script>
+</body>
+</html>

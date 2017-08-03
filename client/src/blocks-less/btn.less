@@ -1,0 +1,62 @@
+.btn {
+  display: inline-block;
+  padding-top: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+
+  font-family: @font-din-pro-cond;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  outline: none;
+  
+  &:hover {
+    background-color: darken(#333333, 7%);
+    transition: 0.4s;
+  }
+  
+  &--small {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  &--sign {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: @text-blue;
+    &:hover {
+      background-color: lighten(@text-blue, 10%);
+    }
+    
+    &:active {
+      background-color: darken(@text-blue, 5%);
+    }
+  }
+  
+  &--cart {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  
+  &--cart-item-del {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-right: 7px;
+  }
+  
+  &--cancel {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: #4d4d4d;
+  }
+}

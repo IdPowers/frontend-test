@@ -1,0 +1,61 @@
+.feat {
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  background: url("../img/product-cover.jpg") no-repeat;
+  background-size: cover;
+}
+
+.feat__slogan {
+  margin: 0;
+  padding: 0;
+  
+  color: #ffffff;
+  font-family: @font-din-pro-cond;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.feat__text {
+  font-family: @font-roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+@media @tablet {
+  
+  .feat__text {
+    width: 400px;
+  }
+}
+
+@media @desktop {
+  
+  .feat {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-position: center;
+  }
+  
+  .feat__slogan {
+    width: 450px;
+  }
+}
+
+
+@media @wide-desktop {
+  .feat {
+    width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
