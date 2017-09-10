@@ -1,0 +1,77 @@
+@import "../../../helpers/mixins.styl"
+
+$bl = 'text'
+
+.{$bl}
+  display inherit
+
+  &__brand
+    font-size 1.5em
+    font-family $font-din-pro-cond
+    font-weight 600
+    text-transform uppercase
+    letter-spacing .02em
+    position relative
+    top .7em
+
+  &__model
+    font-size 2em
+    font-family $font-din-pro-cond
+    font-weight 600
+    text-transform uppercase
+    margin-bottom .1em
+    letter-spacing .034em
+    position relative
+    top .6em
+ 
+  &__price
+    display block
+    font-size 1.2em
+    font-family $font-din-pro-cond
+    font-weight 500
+    color #666666
+    margin-bottom .8em
+    letter-spacing .035em
+    position relative
+    top .8em
+
+  &__colors
+    margin-bottom .75em
+    position relative
+    top 1em
+
+  &__colors-title
+    font-size .9em
+    font-family $font-din-pro-cond
+    font-weight 500
+    color #666666
+    letter-spacing .01em
+
+  &__colors-variants
+    font-size .9em
+    font-family $font-din-pro-cond
+    font-weight 500
+    color #0089CF
+    letter-spacing .03em
+
+  &__size-charts
+    display block
+    position relative
+    top .25em
+    font-size .8em
+    font-family $font-roboto
+    font-weight 100
+    color #666666
+    margin-top 2em
+    margin-bottom 1em
+
+  &__text-size-gap
+    display inline-block
+    margin-right .55em 
+    position relative
+    bottom 1em
+
+  &__text-add-cart-gap
+    display inline-block
+    position relative
+    top .25em

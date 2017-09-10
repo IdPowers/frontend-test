@@ -1,13 +1,24 @@
 {
   "presets": [
-    ["env", { "modules": false }],
+    ["env", 
+      { 
+      "modules": false , 
+      "targets": {
+        "browsers": ["chrome >= 52", "firefox >= 50", "safari >= 9", "ie >= 9", "edge >= 12", "opera >= 42"]
+      }
+      }],
     "stage-2"
   ],
   "plugins": ["transform-runtime"],
   "comments": false,
   "env": {
     "test": {
-      "presets": ["env", "stage-2"],
+      "presets": [["env", { 
+        "modules": false , 
+        "targets": {
+          "browsers": ["chrome >= 52", "firefox >= 50", "safari >= 9", "ie >= 9", "edge >= 12", "opera >= 42"]
+        }
+        }], "stage-2"],
       "plugins": [ "istanbul" ]
     }
   }

@@ -1,0 +1,26 @@
+@import "../../../helpers/mixins.styl"
+
+$bl = 'wish'
+
+.{$bl}
+  display inherit
+  border 1px solid #e4e4e4
+  width 3.1em
+  height 3.1em
+  position relative
+
+  &__post-image
+    max-height 100%
+    max-width 100%
+    width auto
+    height auto
+    position absolute
+    top 0
+    bottom 0  
+    left 0
+    right 0
+    margin auto
+
+  &:hover
+    opacity 0.5
+    cursor pointer

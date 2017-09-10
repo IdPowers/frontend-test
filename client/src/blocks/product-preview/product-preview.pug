@@ -1,23 +1,18 @@
+include /blocks/phone-rotate/phone-rotate
+include /blocks/wish/wish
+include /blocks/text/text
+
 mixin ProductPreview(obj)
   if !obj
     - obj = {}
   +b.product-preview
     +e.centerer
-      +b.phone-rotate
-        +e.post-image(src=require('assets/side-look.png'))
-      +b.wish
-        +e.post-image(src=require('assets/heart.png'))
-      +b.text
-        +e.brand NIKE
-        +e.model AIR MAX TAVAS SD
-        +e.price $ 160.00
-        +e.colors COLORS - BLACK/PINK POW/TOUR YELLOW/WHITE
-        +b.color
-          +e.post-image(src=require('assets/product-color-1.png'))
-          +e.post-image(src=require('assets/product-color-2.png'))
-        +e.size-charts Size charts
-        +b.size
-          +e.title Size
-          +e.post-image(src=require('assets/arrow.png'))
-        +b.add-cart
-          +e.title ADD TO CART
+      +e.centerer-column-gap
+        +e.column
+          +e.column-phone-rotate-gap
+            +PhoneRotate
+        +e.column
+          +e.column-wish-gap
+            +Wish
+          +e.wish-text-gap
+            +Text

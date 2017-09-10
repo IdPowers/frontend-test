@@ -1,0 +1,9 @@
+mixin Size(obj)
+  if !obj
+    - obj = {}
+  +b.size
+    +e.SELECT.select
+      +e.OPTION(selected=true value="Size") Size
+      +e.OPTION(value="S") S
+      +e.OPTION(value="M") M
+      +e.OPTION(value="L") L
