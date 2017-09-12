@@ -1,4 +1,14 @@
+include /blocks/feat-2/feat-2
+include /blocks/box/box
+
 mixin ProductStory(obj)
   if !obj
     - obj = {}
   +b.product-story
+    +e.centerer
+      +e.column-1
+        +e.column-feat-2-gap
+          +Feat2
+      +e.column-2
+        +e.column-box-gap 
+          +Box

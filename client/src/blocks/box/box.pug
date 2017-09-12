@@ -1,0 +1,20 @@
+include /blocks/phone-rotate/phone-rotate
+include /blocks/size/size
+include /blocks/add-cart/add-cart
+
+mixin Box(obj)
+  if !obj
+  - obj = {}
+  +b.box
+    +e.title Nike
+    +e.model Air max Tavas SD
+    +e.colors-variants BLACK/PINK POW/TOUR YELLOW/WHITE
+    +e.box-phone-rotate-gap
+      +PhoneRotate
+    +e.stock En stock 
+    +e.stock-price $160.00
+    +e.size-add-cart-gap
+      +e.box-size-gap
+        +Size
+      +e.box-add-cart-gap
+        +AddCart

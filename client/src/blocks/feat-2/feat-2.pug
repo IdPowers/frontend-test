@@ -1,0 +1,10 @@
+include /blocks/text-2/text-2
+
+mixin Feat2(obj)
+  if !obj
+  - obj = {}
+  +b.feat-2
+    +e.feat-2-text-2-gap
+      +Text2
+    +e.image
+      +e.post-image(src=require('../../assets/photo-6.png'))
