@@ -1,0 +1,48 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'checkbox'
+
+label 
+  display inline-block
+  cursor pointer
+  position relative
+  right .3em
+  padding-left: 1.9em
+  font-family $font-roboto
+  font-size .85em
+  font-weight 400
+  letter-spacing .005em
+
+label:before 
+  content ""
+  display inline-block
+  width 1em
+  height 1em
+  margin-right 10px
+  padding-bottom 1px
+  position absolute
+  left 0
+  bottom 1px
+  background-color #ffffff
+  box-shadow inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8)
+
+input[type=checkbox] 
+  display none
+
+input[type=checkbox]:checked + label:before 
+  content "\25FC"
+  color #0089cf
+  font-size 1em
+  text-align center
+  line-height 1em
+
+.{$bl}
+  display block
+
+  &__terms
+    font-family $font-roboto
+    font-size .85em
+    font-weight 400
+    letter-spacing .01em
+    text-decoration none
+    color #0089cf

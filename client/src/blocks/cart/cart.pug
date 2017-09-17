@@ -1,0 +1,12 @@
+include /blocks/form/form
+include /blocks/your-cart-resume/your-cart-resume
+
+mixin Cart(obj)
+  if !obj
+    - obj = {}
+  +b.cart
+    +e.title Informations
+    +e.cart-form-gap
+      +Form
+    +e.cart-your-cart-resume-gap
+      +YourCartResume

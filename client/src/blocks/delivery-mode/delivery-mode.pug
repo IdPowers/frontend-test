@@ -1,0 +1,13 @@
+include /blocks/textbox/textbox
+
+mixin DeliveryMode(obj)
+  if !obj
+    - obj = {}
+  +b.delivery-mode
+    +e.title Delivery mode
+    +e.delivery-mode-select-gap
+      +e.SELECT.select
+        +e.OPTION(selected=true data-content="$20.00" value="Collisimo france") Collisimo france, $20.00
+        +e.OPTION(value="USA") USA
+        +e.OPTION(value="Finland") Finland
+        +e.OPTION(value="Canada") Canada

@@ -31,7 +31,7 @@ mixin Header(obj)
             height: 14,
             class: '__icon_cart'
           })
-          | Cart
+          +e.A.title(href="#" onclick="onCartClicked()") Cart
           +e.SPAN.cart-count (2)
         +e.auth
           +e.auth-sign-in

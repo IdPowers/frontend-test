@@ -1,0 +1,7 @@
+mixin Checkbox(obj)
+  if !obj
+    - obj = {}
+  +b.checkbox
+    +e.INPUT.checkbox-input(id="checkbox" type="checkbox" checked=true)
+    +e.LABEL.checkbox-label(for="checkbox") I agree 
+    +e.A.terms(href="#") terms of use and privacy

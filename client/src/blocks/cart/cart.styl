@@ -1,0 +1,32 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'cart'
+
+.{$bl}
+  position fixed
+  right 0
+  top 0
+  display none
+  width 34em
+  height 100%
+  background-color #ffffff
+  box-shadow 0 0 10px rgba(0,0,0,0.5)
+
+  &__title
+    text-transform uppercase
+    font-family $font-din-pro-cond
+    font-size 2em
+    position relative
+    top .95em
+    left 1.235em
+    font-weight 600
+    letter-spacing .04em
+
+  &__cart-form-gap
+    position relative
+    margin-top 3.3em
+    margin-right -6.3em
+
+  &__cart-your-cart-resume-gap
+    margin-left 2.6em
+    margin-right 1.4em

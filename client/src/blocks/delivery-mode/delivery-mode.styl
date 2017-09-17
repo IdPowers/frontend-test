@@ -1,0 +1,52 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'delivery-mode'
+
+.{$bl}
+  
+  &__title
+    text-transform uppercase
+    font-family $font-din-pro-cond
+    font-size .85em
+    font-weight 600
+    margin-left 2.8em
+    letter-spacing .04em
+
+  &__delivery-mode-select-gap
+    margin-left 2.45em
+    margin-top .7em
+    width 15em
+
+  &__select
+    background transparent
+    width 100%
+    border 1px solid #e4e4e4
+    height 100%
+    -webkit-appearance none
+    -moz-appearance: none
+    appearance none
+    background url(../../assets/arrow.png) 91% / 5% no-repeat #fff
+    font-size .9em
+    font-family $font-roboto
+    font-weight 300
+    padding-top .15em
+    padding-bottom .7em
+    border 0
+    border-bottom 2px solid #e4e4e4
+    // IE9 Hack
+    z-index 1
+
+  // IE9 Hack
+  &:before
+    display block
+    position absolute
+    content ''
+    right 0
+    top 0
+    height 81%
+    width 19%
+    background #fff
+    z-index 5
+
+  &__select:focus
+    outline none

@@ -1,0 +1,108 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'product-type'
+
+.{$bl}
+  width 100%
+  height 100%
+
+  &__quantity
+    display inline-block
+    position relative
+    right .1em
+    line-height 1.7em
+    top 0.8em
+
+  &__quantity-plus
+    display block
+    text-decoration none
+    font-family $font-roboto
+    font-weight 900
+    color #cccccc
+
+  &__quantity-minus
+    display block
+    text-decoration none
+    font-family $font-roboto
+    font-weight 900
+    color #cccccc
+
+  &__quantity-value
+    display block
+    font-family $font-roboto
+    font-size .9em
+
+  &__dtail
+    display inline-block
+    margin-left 1.37em
+    margin-top 1.5em
+    position relative
+    bottom .5em
+    width 12.9em
+
+  &__brand
+    text-transform uppercase
+    line-height 1.75em
+    font-family $font-din-pro-cond
+    font-size 1em
+    font-weight 500
+    letter-spacing .065em
+
+  &__model
+    font-size .9em
+    font-family $font-roboto
+
+  &__post-image
+    width 100%
+
+  &__image
+    display inline-block
+    margin-left 1.2em
+    margin-top 1em
+    width 3.4em
+    position relative
+    bottom .6em
+
+  &__size
+    display inline-block
+    margin-left .9em
+    position relative
+    bottom 1.15em
+
+  &__size-title
+    display inline-block
+    font-family $font-din-pro-cond
+    font-size .89em
+    font-weight 500
+    text-transform uppercase
+
+  &__size-value
+    margin-left 1.45em
+    display inline-block
+    position relative
+    width 2.15em
+    height 2.15em
+    background-color #cccccc
+    color #ffffff
+    font-family $font-din-pro-cond
+    font-size .89em
+    font-weight 500
+    text-transform uppercase
+    text-align center
+    vertical-align middle
+    line-height @height     
+
+  &__price
+    margin-left .8em
+    display inline-block
+    position relative
+    left 2.1em
+    bottom 1.3em
+    font-family $font-din-pro-cond
+    font-size .83em
+    font-weight 500
+    text-transform uppercase
+    letter-spacing .07em
+
+  &__price-value:before
+    content "$ "
