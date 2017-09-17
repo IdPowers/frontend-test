@@ -1,0 +1,9 @@
+mixin Country(obj)
+  if !obj
+    - obj = {}
+  +b.country
+    +e.SELECT.select
+      +e.OPTION(selected=true value="Country") Country
+      +e.OPTION(value="USA") USA
+      +e.OPTION(value="Finland") Finland
+      +e.OPTION(value="Canada") Canada

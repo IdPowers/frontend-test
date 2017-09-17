@@ -1,0 +1,24 @@
+include /blocks/country/country
+include /blocks/textbox/textbox
+
+mixin PersonnalInfos(obj)
+  if !obj
+    - obj = {}
+  +b.personnal-infos
+    +e.title Personnal informations
+    +e.personnal-infos-country-gap
+      +Country
+    +e.personnal-infos-first-name-gap
+      +Textbox({class:'first-name', placeholder:'First name'})
+    +e.personnal-infos-second-name-gap
+      +Textbox({class:'second-name', placeholder:'Second name'})
+    +e.personnal-infos-address-gap
+      +Textbox({class:'address', placeholder:'Address'})
+    +e.personnal-infos-postal-code-gap
+      +Textbox({class:'postal-code', placeholder:'Postal code'})
+    +e.personnal-infos-city-gap
+      +Textbox({class:'city', placeholder:'City'})
+    +e.personnal-infos-email-gap
+      +Textbox({class:'email', placeholder:'Email', value:'jeanlouis@gmail.com'})
+    +e.personnal-infos-phone-gap
+      +Textbox({class:'phone', placeholder:'Phone'})
