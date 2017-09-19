@@ -3,7 +3,7 @@
 require('./index.styl');
 require('blocks/header/header');
 require('blocks/footer/footer');
-
+require('blocks/product-type/product-type');
 
 window.validateForm = function() {
   var firstNameElement = document.getElementsByClassName('first-name')[0];

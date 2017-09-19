@@ -3,9 +3,9 @@ mixin ProductType(obj)
     - obj = {}
   +b.product-type(class=obj.class || '' data-price=obj.price || '')
     +e.quantity
-      +e.A.quantity-plus(href="#") +
+      +e.A.quantity-plus(href="#" onclick="plusQuantity('" + obj.class + "')") +
       +e.quantity-value 1
-      +e.A.quantity-minus(href="#") &mdash;
+      +e.A.quantity-minus(href="#" onclick="minusQuantity('" + obj.class + "')") &mdash;
     +e.image
       +e.post-image(src=obj.img.src || '')
     +e.dtail
