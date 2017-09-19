@@ -42,40 +42,45 @@ mixin Footer(obj)
         +e.share
           +e.share-items
             +e.share-item
-              +Icon({
-                icon: '#icon-vk',
-                class: '__share-icon_vk',
-                width: 20,
-                height: 20
-              })
+              +e.A.vk-share-link(href="http://vk.com/share.php?url=http%3A//vk.com" target="_blank")
+                +Icon({
+                  icon: '#icon-vk',
+                  class: '__share-icon_vk',
+                  width: 20,
+                  height: 20
+                })
             +e.share-item
-              +Icon({
-                icon: '#icon-ok',
-                class: '__share-icon_ok',
-                width: 20,
-                height: 20
-              })
+              +e.A.ok-share-link(href="http://www.ok.ru/dk?st.cmd=addShare&st.s=1&st._surl=http%3A//www.ok.ru&st.comments=Comment" target="_blank")
+                +Icon({
+                  icon: '#icon-ok',
+                  class: '__share-icon_ok',
+                  width: 20,
+                  height: 20
+                })
             +e.share-item
-              +Icon({
-                icon: '#icon-facebook',
-                class: '__share-icon_fb',
-                width: 9,
-                height: 20
-              })
+              +e.A.fb-share-link(href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.facebook.com" target="_blank")
+                +Icon({
+                  icon: '#icon-facebook',
+                  class: '__share-icon_fb',
+                  width: 9,
+                  height: 20
+                })
             +e.share-item
-              +Icon({
-                icon: '#icon-twitter',
-                class: '__share-icon_tw',
-                width: 17,
-                height: 13
-              })
+              +e.A.tw-share-link(href="https://twitter.com/home?status=http%3A//twitter.com" target="_blank")
+                +Icon({
+                  icon: '#icon-twitter',
+                  class: '__share-icon_tw',
+                  width: 17,
+                  height: 13
+                })
             +e.share-item
-              +Icon({
-                icon: '#icon-google-plus',
-                class: '__share-icon_gp',
-                width: 20,
-                height: 20
-              })
+              +e.A.gp-share-link(href="https://plus.google.com/share?url=google.com" target="_blank")
+                +Icon({
+                  icon: '#icon-google-plus',
+                  class: '__share-icon_gp',
+                  width: 20,
+                  height: 20
+                })
           +e.share-title Share this page
       +e.row
         +e.copyright Copyright © 2015 Bree Orthonormai. All rights reserved.
