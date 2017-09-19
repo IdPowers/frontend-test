@@ -1,0 +1,21 @@
+include /blocks/color/color
+include /blocks/size/size
+include /blocks/add-cart/add-cart
+
+mixin Text(obj)
+  if !obj
+    - obj = {}
+  +b.text
+    +e.brand NIKE
+    +e.model AIR MAX TAVAS SD
+    +e.price $ 160.00
+    +e.colors
+      +e.SPAN.colors-title COLORS - 
+      +e.SPAN.colors-variants BLACK/PINK POW/TOUR YELLOW/WHITE
+    +e.text-color-gap
+      +Color
+    +e.size-charts Size charts
+    +e.text-size-gap
+      +Size
+    +e.text-add-cart-gap
+      +AddCart

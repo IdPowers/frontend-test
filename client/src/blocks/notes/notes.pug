@@ -1,0 +1,9 @@
+include /blocks/textbox/textbox
+
+mixin Notes(obj)
+  if !obj
+    - obj = {}
+  +b.notes
+    +e.title Notes
+    +e.notes-note-gap
+      +Textbox({class:'note', placeholder:'Note'})

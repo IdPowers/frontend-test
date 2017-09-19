@@ -1,0 +1,84 @@
+@import "../../../helpers/mixins.styl"
+
+$bl = 'box'
+
+.{$bl}
+  width 100%
+  height 100%
+  border .3em solid #e4e4e4
+  float right 
+  position relative
+  padding 1em
+  padding-left 1.2em
+  padding-right .6em
+
+  &__title
+    font-family $font-din-pro-cond
+    font-size 1.5em
+    font-weight 600
+    text-transform uppercase
+    margin-bottom 0.1em
+    margin-left .24em
+
+  &__model
+    font-size .85em
+    font-family $font-roboto
+    font-weight 300
+    margin-bottom .7em
+    margin-left .3em
+    letter-spacing .045em
+  
+  &__colors-variants
+    font-size .9em
+    font-family $font-din-pro-cond
+    font-weight 500
+    color #0089CF
+    letter-spacing .026em
+    text-transform uppercase
+    margin-left .35em
+    margin-top 1em
+
+  &__box-phone-rotate-gap
+    margin-top 3em
+
+  &__box-size-gap
+    display inline-block
+    margin-right 0.4em
+    position relative
+    top 1.2em
+    left .5em
+    width 7.2em
+    height 3.2em
+
+  &__box-add-cart-gap
+    display inline-block
+    position relative
+    top 1em
+    width 7.19em
+    height 3.15em
+    position relative
+    left 8.3em
+    top -2em
+
+  &__size-add-cart-gap
+    display block
+    margin-top -.2em
+
+  &__stock
+    display inline-block
+    text-transform uppercase
+    font-size .9em
+    font-family $font-din-pro-cond
+    font-weight 500
+    margin-top 3em
+    margin-left .38em
+    letter-spacing .03em
+
+  &__stock-price
+    display inline-block
+    font-size 1.2em
+    font-family $font-din-pro-cond
+    font-weight 500
+    margin-top 2.1em
+    margin-right .86em
+    float right

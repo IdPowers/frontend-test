@@ -1,0 +1,43 @@
+@import "../../../helpers/mixins.styl"
+
+$bl = 'size'
+
+.{$bl}
+  display inherit
+  font-size .8em
+  font-family $font-din-pro   
+  // IE9 Hack
+  position relative
+  display inline-block
+  border solid black 1px
+  z-index 0
+  width 100%
+  height 100%
+
+  &__select
+    background transparent
+    width 100%
+    border 1px solid #e4e4e4
+    height 100%
+    -webkit-appearance none
+    -moz-appearance: none
+    appearance none
+    background url(../../assets/arrow.png) 81% / 10% no-repeat #fff
+    font-size 1.1em
+    font-family $font-din-pro-cond
+    text-transform uppercase
+    padding-left 1.45em
+    // IE9 Hack
+    z-index 1
+
+  // IE9 Hack
+  &:before
+    display block
+    position absolute
+    content ''
+    right 0
+    top 0
+    height 99%
+    width 18%
+    background #fff
+    z-index 5

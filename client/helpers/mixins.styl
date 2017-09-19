@@ -2,7 +2,12 @@ $font-din-pro-cond = 'DIN Pro Condensed', Arial, sans-serif
 $font-din-pro = 'DIN Pro', Arial, sans-serif
 $font-roboto = 'Roboto', Arial, sans-serif
 
-centerer()
-  max-width: 1280px
-  margin-right: auto
-  margin-left: auto
+
+centerer(leftMargin = auto, rightMargin = auto)
+  max-width 1280px
+  margin-right rightMargin
+  margin-left leftMargin
+
+opacity(value) 
+  opacity value
+  filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(value * 100) + ')')

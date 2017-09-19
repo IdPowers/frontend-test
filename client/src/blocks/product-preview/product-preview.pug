@@ -1,5 +1,18 @@
+include /blocks/phone-rotate/phone-rotate
+include /blocks/wish/wish
+include /blocks/text/text
+
 mixin ProductPreview(obj)
   if !obj
     - obj = {}
   +b.product-preview
-    //- todo верстка превью товара
+    +e.centerer
+      +e.centerer-column-gap
+        +e.column
+          +e.column-phone-rotate-gap
+            +PhoneRotate
+        +e.column
+          +e.column-wish-gap
+            +Wish
+          +e.wish-text-gap
+            +Text

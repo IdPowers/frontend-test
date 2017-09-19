@@ -1,0 +1,36 @@
+include /blocks/product-type/product-type
+include /blocks/checkbox/checkbox
+include /blocks/cta/cta
+
+mixin YourCartResume(obj)
+  - var subtotal = 285;
+  if !obj
+    - obj = {}
+  +b.your-cart-resume
+    +e.title Your cart
+    +e.your-cart-resume-product-type-gap
+      +e.product-list
+        +ProductType({
+          class:'product-1',
+          img:{src:require('assets/product-1.png')},
+          price: 105.00,
+          brand:'Comme des garçons play',
+          model:'Rod lover vintage - exclusive' ,
+          size: 7.5})
+        +ProductType({
+          class:'product-2',
+          img:{src:require('assets/product-2.png')},
+          price: 160.00,
+          brand:'Nike',
+          model:'Air Max Tavas SD',
+          size: 7.5 })
+      +e.shipping
+        +e.shipping-title Shipping
+        +e.shipping-value 20.00
+      +e.subtotal
+        +e.subtotal-title Subtotal
+        +e.subtotal-value #{parseFloat(Math.round(subtotal * 100) / 100).toFixed(2).toString()}
+      +e.your-cart-resume-checkbox-gap
+        +Checkbox
+      +e.your-cart-resume-cta-gap
+        +Cta

@@ -1,0 +1,18 @@
+mixin ProductType(obj)
+  if !obj
+    - obj = {}
+  +b.product-type(class=obj.class || '' data-price=obj.price || '')
+    +e.quantity
+      +e.A.quantity-plus(href="#" onclick="plusQuantity('" + obj.class + "')") +
+      +e.quantity-value 1
+      +e.A.quantity-minus(href="#" onclick="minusQuantity('" + obj.class + "')") &mdash;
+    +e.image
+      +e.post-image(src=obj.img.src || '')
+    +e.dtail
+      +e.brand #{obj.brand || ''}
+      +e.model #{obj.model || ''}
+    +e.size
+      +e.size-title Size
+      +e.size-value #{obj.size || ''} 
+    +e.price
+      +e.price-value #{parseFloat(Math.round(obj.price * 100) / 100).toFixed(2).toString()} 

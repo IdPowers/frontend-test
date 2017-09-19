@@ -1,0 +1,83 @@
+@import "../../../helpers/mixins.styl";
+
+$bl = 'your-cart-resume'
+
+.{$bl}
+  margin-top 3.5em
+
+  &__title
+    text-transform uppercase
+    font-family $font-din-pro-cond
+    font-size .85em
+    font-weight 600
+    letter-spacing .04em
+
+  &__your-cart-resume-product-type-gap
+    margin-top 1.1em
+
+  &__product-list > div
+    border-top 1px solid #e4e4e4
+    margin-bottom .8em
+
+  &__product-list > div:last-child
+    border-bottom 1px solid #e4e4e4
+    padding-bottom 0.91em
+
+  &__your-cart-resume-checkbox-gap
+    margin-top .7em
+
+  &__shipping
+    margin-top 1.35em
+    margin-left 18.75em
+
+  &__shipping-title
+    display inline-block
+    text-transform uppercase
+    font-family $font-din-pro-cond
+    font-size .85em
+    font-weight 600
+    letter-spacing .04em
+
+  &__shipping-value
+    display inline-block
+    float right
+    font-family $font-din-pro-cond
+    font-size .85em
+    font-weight 600
+    letter-spacing .04em
+
+  &__shipping-value:before
+    content "$ "
+
+  &__subtotal
+    margin-top 1.4em
+    margin-left 18.75em
+
+  &__subtotal-title
+    display inline-block
+    text-transform uppercase
+    font-family $font-din-pro-cond
+    font-size .85em
+    font-weight 600
+    letter-spacing .04em
+
+  &__subtotal-value
+    display inline-block
+    float right
+    margin-left 4em
+    font-family $font-din-pro-cond
+    font-size .85em
+    font-weight 600
+    letter-spacing .04em
+
+    &:before
+      content "$ "
+
+  &__your-cart-resume-cta-gap
+    position relative
+    float right
+    margin-top 1.3em
+    margin-right .05em
+    width 11.3em
+    height 3.15em
+    position relative

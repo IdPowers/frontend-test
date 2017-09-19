@@ -1,0 +1,13 @@
+include /blocks/benefits/benefits
+
+mixin Text2(obj)
+  if !obj
+    - obj = {}
+  +b.text-2
+    +e.title-1 Story
+    +e.title-2 Nike air max origins
+    +e.P.story Nike's revolutionary Air-Sole unit made its way into Nike footwear in the late '70s. 
+      In 1987, the Nike Air Max 1 debuted with visible air in its heel, 
+      allowing fans more than just the feel of Air-Sole comfort
+    +e.text-2-benefits-gap
+      +Benefits

@@ -1,0 +1,5 @@
+mixin Textbox(obj)
+  if !obj
+    - obj = {}
+  +b.textbox
+    +e.INPUT.input(class=obj.class || '' type='text' value=obj.value || '' placeholder=obj.placeholder || '')

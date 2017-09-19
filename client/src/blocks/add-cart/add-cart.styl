@@ -1,0 +1,26 @@
+@import "../../../helpers/mixins.styl"
+
+$bl = 'add-cart'
+
+.{$bl}
+  display inherit
+  border 1px solid #333
+  background-color: #333
+  width 100%
+  height 100%
+  display table
+  text-align center
+
+
+  &__title
+    display table-cell
+    vertical-align middle
+    font-family $font-din-pro-cond
+    font-size .85em
+    text-transform uppercase
+    color #fff
+    letter-spacing .06em
+  
+  &:hover
+    opacity 0.8
+    cursor pointer

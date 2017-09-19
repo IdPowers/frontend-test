@@ -1,0 +1,14 @@
+include /blocks/personnal-infos/personnal-infos
+include /blocks/notes/notes
+include /blocks/delivery-mode/delivery-mode
+
+mixin Form(obj)
+  if !obj
+    - obj = {}
+  +b.form
+    +e.form-personnal-infos-gap
+      +PersonnalInfos
+    +e.form-notes-gap
+      +Notes
+    +e.form-delivery-mode-gap
+      +DeliveryMode
